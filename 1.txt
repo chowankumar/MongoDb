@@ -1,0 +1,47 @@
+#validation
+
+db.createCollection("students"{
+    validator:{
+        $jsonSchema:{
+            title : "Student object validation",
+            required : ["name","age","course"],
+            properties : {
+                name: {
+                    bsonType : "string",
+                    description : "Name muse be string and required"
+                },
+                age: {
+                    bsonType : "int",
+                    minimum : 5,
+                    maximum : 20,
+                    description : "age must be number and required"
+                },
+                course: {
+                    bsonType : "int",
+                     enum : ["CS","SE"]
+                    description : "COURSE MUST BE FROM "CS","SE" "
+                },
+            }
+        }
+    }
+})
+
+
+/////MODIFY AN EXISTING COLLECTION SCHEMA///
+
+db.runCommand({
+    collMod : "collection_name",
+    validator :{
+        $jsonSchema:{
+            required:["name","age"],
+            properties:{
+                name:{
+                    bsonType:"String"
+                    description:"Name must be string and is required"
+                },
+
+            }
+        }
+    }
+})
+

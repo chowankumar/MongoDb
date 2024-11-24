@@ -29,16 +29,5 @@
 # db.col_name.insertMany([]) : add multiple documents;
 
 
-////////// Date Datatype/////////
-
-# {dob : ISODate("2024-10-18T18:30:00Z")} T for time, Z means Coordinational Time.
-
-# {dob : ISODate("2024-10-18T18:30:00 + 02:00")}  Central European Time.
-
-# {dob : ISODate("2024-10-18T18:30:00 - 5 : 00")} Eastern Standard Time.
-
-# {dob : ISODate("2024-10-18T18:30:00Z")} Local Time Zone. Jahn database rakha hai whn ka time pick kr lega. 
-
-# {dob : new Date()} : current Date and time;
 
 
