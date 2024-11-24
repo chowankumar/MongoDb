@@ -1,0 +1,10 @@
+# Collection of data called database.
+
+# MongoDb is a NoSql(non relational)database.it stores data in type of json format called BSON.
+
+# BINARYJSON(BSON) . BSON have more datatypes than JSON. [string,double,32-bit-integer,64-bit-integer,boolean,array,object,null,regular expression, timestamp, date,objectId].Number is only datatype which present in JSON but not in BSON. Data saved in Binary format.Faster than JSON.    
+
+
+# SQL database store data in tables.
+
+# NoSql database store data in the form of document . Data store in collection.
