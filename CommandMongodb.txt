@@ -1,0 +1,29 @@
+# db.help() : show all the commands
+
+# use database_name  : create new database and use existing database,
+
+# show dbs : show all the databases;
+
+# db : show the name of current database;
+
+#db.dropDatabase() : remove the drop;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+# db.collection_name.help() : show helpful command for  collection.
+
+# db.createCollection("collection_name") : create the collection;
+
+# show collections : show all the collections of the current database;
+
+# db.database_name.renameCollection("new_name"): rename the collection name;
+
+# db.collection_name.drop() : remove the collection;
+
+
+
+
+
+
+
+
