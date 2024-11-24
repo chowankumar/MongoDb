@@ -8,7 +8,9 @@
 
 #db.dropDatabase() : remove the drop;
 
+
 /////////////////////////////////////////////////////////////////////////////////////////////
+
 
 # db.collection_name.help() : show helpful command for  collection.
 
@@ -22,12 +24,92 @@
 
 
 
-///////////Insert data in collection////////
+//////////////////////////////////////Insert data in collection///////////////////////////////////
 
 # db.col_name.insertOne({}) : add  single document;
 
 # db.col_name.insertMany([]) : add multiple documents;
 
 
+//////////////////////////////////////validation on the schema ////////////////////////////////////
 
+db.createCollection("students"{
+    validator:{
+        $jsonSchema:{
+            title : "Student object validation",
+            required : ["name","age","course"],
+            properties : {
+                name: {
+                    bsonType : "string",
+                    description : "Name muse be string and required"
+                },
+                age: {
+                    bsonType : "int",
+                    minimum : 5,
+                    maximum : 20,
+                    description : "age must be number and required"
+                },
+                course: {
+                    bsonType : "int",
+                     enum : ["CS","SE"]
+                    description : "COURSE MUST BE FROM "CS","SE" "
+                },
+            }
+        }
+    }
+})
+
+
+==> MODIFY AN EXISTING COLLECTION SCHEMA
+
+db.runCommand({
+    collMod : "collection_name",
+    validator :{
+        $jsonSchema:{
+            required:["name","age"],
+            properties:{
+                name:{
+                    bsonType:"String"
+                    description:"Name must be string and is required"
+                },
+
+            }
+        }
+    }
+})
+
+
+
+
+/////////////////////////update and replace///////////////////////////////////
+
+# upateOne() : upate one document first document;
+
+    db.collection_name.updateOne(
+        {field : "Value"}, ----> filter
+        {$set: {updated_field:"new_value"}-->update
+        })
+
+
+# updateMany() : update many
+
+ db.collection_name.updateMany(
+        {field : "Value"},
+        {$set: {updated_field:"new_value"}}
+        )
+
+# Operator
+1 : $unset : Removes the field from the document. 
+2 : $rename :  Rename the field.
+3 : $inc : Increament the field value 
+4 : $mul : multiples the field value
+5 : $currentDate  : sets the field value to the current date.
+
+#Update Array Operator
+
+1 : $push : adds an element to an array.
+2 : $pop  : remove the first and last element of the array.
+3 : $pull : premoves all the elements from an array the match the query.
+4 : $addToSet : Add unique elements to an array.
+ 
 
