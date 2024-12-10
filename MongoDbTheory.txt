@@ -1,19 +1,20 @@
 # Collection of data called database.
 
-# MongoDb is a NoSql(non relational)database.it stores data in type of json format called BSON.
+# MongoDB is a NoSQL(non-relational)database. it stores data in the type of JSON format called BSON.
 
-# BINARYJSON(BSON) . BSON have more datatypes than JSON. [string,double,32-bit-integer,64-bit-integer,boolean,array,object,null,regular expression, timestamp, date,objectId].Number is only datatype which present in JSON but not in BSON. Data saved in Binary format.Faster than JSON.    
+# BINARYJSON(BSON) . BSON has more data types than JSON. [string, double,32-bit-integer,64-bit-integer, Boolean, array, object, null, regular expression, timestamp, 
+date, objectid ]. The number is only the datatype that is present in JSON but not in BSON. Data is saved in Binary format. Faster than JSON.    
 
 
-# SQL database store data in tables.
+# SQL database stores data in tables.
 
-# NoSql database store data in the form of document . Data store in collection.
+# NoSQL database stores data in the form of a document. Data stored in collection.
 
 
 
 ////////// Date Datatype /////////
 
-# {dob : ISODate("2024-10-18T18:30:00Z")} T for time, Z means Coordinational Time.
+# {dob : ISODate("2024-10-18T18:30:00Z")} T for time, Z means Co-ordinational Time.
 
 # {dob : ISODate("2024-10-18T18:30:00 + 02:00")}  Central European Time.
 
